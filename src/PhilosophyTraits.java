@@ -4,6 +4,6 @@ public enum PhilosophyTraits {
     IDEALISM,
     EXISTENTIALISM,
     PESSIMISM,
-    NIHILISM,
+    NIHILISM
 
 }

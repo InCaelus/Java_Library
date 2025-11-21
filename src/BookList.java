@@ -40,4 +40,26 @@ public class BookList {
         books.add(new Book("마흔에 읽는 니체 : 지금 이 순간을 살기 위한 철학 수업", "장재형",
                 PhilosophyTraits.NIHILISM, "165.77 장186ㅁ"));
     }
+
+    public Book getBookByTitle(String title) {
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title)) {
+                return book;
+            }
+        }
+        return null;
+    }
+    public List<Book> getBooksByTrait(PhilosophyTraits trait) {
+        List<Book> list = new ArrayList<>();
+        for (Book b : books) {
+            if (b.getTrait() == trait) {
+                list.add(b);
+            }
+        }
+        return list;
+    }
+
+    public List<Book> getAllBooks() {
+        return books;
+    }
 }
