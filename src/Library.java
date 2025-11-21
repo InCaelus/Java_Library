@@ -3,7 +3,8 @@ import java.util.ArrayList;
 public class Library {
     private ArrayList<Book> books = new ArrayList<>();
     public void addBook(String title, String author, String trait, String callNumber) {
-        books.add(new Book(title, author, trait, callNumber));
+        PhilosophyTraits pt = PhilosophyTraits.valueOf(trait.toUpperCase());
+        books.add(new Book(title, author, pt, callNumber));
     }
 
     public void printBooks() {

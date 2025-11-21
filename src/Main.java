@@ -20,13 +20,12 @@ public class Main {
 
 
             choice = sc.nextInt();
-            sc.nextLine();  // 버퍼 비우기
+            sc.nextLine();
 
             switch (choice) {
                 case 1:
 
                     System.out.println("합리주의 책 목록");
-                    // 사용자 입력에 기반한 책 리스트 출력 기능 구현하기
                     System.out.println("책1");
                     System.out.println("책2");
                     System.out.println("책3");

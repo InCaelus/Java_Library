@@ -1,10 +1,10 @@
 public class Book {
     private String title;
     private String author;
-    private String trait; // 철학 사상
+    private PhilosophyTraits trait;// 철학 사상
     private String callNumber; // 청구기호
 
-    public Book(String title, String author, String trait, String callNumber) {
+    public Book(String title, String author, PhilosophyTraits trait, String callNumber) {
         this.title = title;
         this.author = author;
         this.trait = trait;
@@ -15,7 +15,7 @@ public class Book {
         return title;
     }
 
-    public String getTrait() {
+    public PhilosophyTraits getTrait() {
         return trait;
     }
 
