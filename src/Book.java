@@ -15,6 +15,10 @@ public class Book {
         return title;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
     public PhilosophyTraits getTrait() {
         return trait;
     }
@@ -25,6 +29,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "------책 정보------"+ "\n제목: " + title + "\n사상: " + trait + "\n청구 기호: " + callNumber + "\n--------------";
+        return "------책 정보------"+ "\n제목: " + title + "\n저자: " + author  + trait + "\n청구 기호: " + callNumber + "\n--------------";
     }
 }
