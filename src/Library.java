@@ -1,3 +1,9 @@
+// 사용자 입력 기능 구현 클래스
+// https://github.com/InCaelus/Java_Libray/issues/2
+
+// 사용자 입력 기반 출력 기능 구현 클래스
+// https://github.com/InCaelus/Java_Libray/issues/3
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,6 +30,7 @@ public class Library {
                System.out.println("====책 정보====");
                System.out.println("제목: " + b.getTitle());
                System.out.println("사상: " + b.getTrait());
+               System.out.println("저자: " + b.getAuthor());
                System.out.println("청구 기호: " + b.getCallNumber());
                System.out.println("==============");
                break;
