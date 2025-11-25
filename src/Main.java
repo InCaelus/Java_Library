@@ -1,11 +1,11 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
+    System.out.println("도서관 프로그램 로딩중!");
+    System.out.println("도서관 프로그램 로딩 완료 !");
 
-        Scanner sc = new Scanner(System.in);
-        int choice = -1;
+    Library library = new Library();
 
+<<<<<<< HEAD
 
         while (choice != 0) {
             System.out.println("===== 메뉴 =====");
@@ -174,3 +174,9 @@ public class Main {
 
 
 
+=======
+    library.userInput();
+    library.start();
+    }
+}
+>>>>>>> 7d222a8c99f6442f76161db5f174bbd98c414784
