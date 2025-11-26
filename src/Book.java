@@ -30,7 +30,5 @@ public class Book {
     @Override
     public String toString() {
         return "------책 정보------"+ "\n제목: " + title + "\n저자: " + author  + trait + "\n청구 기호: " + callNumber + "\n--------------";
-
-        // .
     }
 }
