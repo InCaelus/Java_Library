@@ -94,13 +94,13 @@ public class BookList {
         for (String isbn : bookMap.keySet()) {
             ArrayList<Object> info = bookMap.get(isbn);
 
+            String callNumber = (String) info.get(0);
             String t = (String) info.get(1);
             String author = (String) info.get(2);
             PhilosophyTraits trait = (PhilosophyTraits) info.get(3);
-            String callNumber = (String) info.get(0);
 
             if (t.equalsIgnoreCase(title)) {
-                return new Book(isbn, t, author, trait, callNumber);
+                return new Book(isbn, callNumber, title, author, trait);
             }
         }
         return null;
@@ -117,9 +117,9 @@ public class BookList {
             if (tr == trait) {
                 String callNumber = (String) info.get(0);
                 String title = (String) info.get(1);
-                String author = (String) info.get(2);
+                String author =  (String) info.get(2);
 
-                list.add(new Book(isbn, title, author, trait, callNumber));
+                list.add(new Book(isbn, callNumber, title, author, trait));
             }
         }
         return list;
@@ -136,7 +136,7 @@ public class BookList {
             String author = (String) info.get(2);
             PhilosophyTraits trait = (PhilosophyTraits) info.get(3);
 
-            list.add(new Book(isbn, title, author, trait, callNumber));
+            list.add(new Book(isbn, callNumber, title, author, trait));
         }
         return list;
     }
