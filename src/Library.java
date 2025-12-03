@@ -16,27 +16,6 @@ public class Library {
        bl = new BookList();
    }
 
-   public void userInput() {
-       while(true) {
-           System.out.println("책 제목을 입력하세요");
-           String title = sc.nextLine();
-
-           Book b = bl.getBookByTitle(title);
-
-           if(b == null) {
-               System.out.println("존재하지 않는 책입니다. 다시 입력하세요");
-           } else {
-
-               System.out.println("====책 정보====");
-               System.out.println("제목: " + b.getTitle());
-               System.out.println("사상: " + b.getTrait());
-               System.out.println("저자: " + b.getAuthor());
-               System.out.println("청구 기호: " + b.getCallNumber());
-               System.out.println("==============");
-               break;
-           }
-       }
-   }
     public void start() {
         while (true) {
             System.out.println("===== 철학 도서관 메뉴 =====");
@@ -87,7 +66,7 @@ public class Library {
     }
 
     private void showBooksByTrait(PhilosophyTraits trait) {
-        System.out.println("\n=== " + trait + " 사상의 책 ===");
+        System.out.println("\n=== " + trait + " 사상의 책(isbn 정렬 완료) ===");
 
         List<Book> books = bl.getBooksByTrait(trait);
 
@@ -116,7 +95,7 @@ public class Library {
     }
 
     private void showAllBooks() {
-        System.out.println("\n=== 전체 책 목록 ===");
+        System.out.println("\n=== 전체 책 목록(isbn 정렬 완료) ===");
         for (Book b : bl.getAllBooks()) {
             System.out.println(b);
         }
