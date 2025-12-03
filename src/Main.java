@@ -4,8 +4,7 @@ public class Main {
     System.out.println("도서관 프로그램 로딩 완료 !");
 
     Library library = new Library();
-
-    library.userInput();
+    
     library.start();
     }
 }
