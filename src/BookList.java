@@ -30,7 +30,7 @@ public class BookList {
                 "칸트의『순수이성비판』",
                 "박중목, 원당희",
                 PhilosophyTraits.IDEALISM);
-        
+
         addBook(bookMap, "900-11-005", "165.4 M322rK4ㄱ",
                 "이성과 혁명",
                 "김현일",
