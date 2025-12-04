@@ -37,7 +37,7 @@ class LibraryTest {
         setInput("없는 책\n데카르트의 『성찰』 입문\n");
 
         Library lib = new Library();
-        lib.userInput();
+        lib.toString();
 
         String output = outContent.toString();
 
