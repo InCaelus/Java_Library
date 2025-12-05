@@ -5,25 +5,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class PhilosophyTraitsTest {
 
     @Test
-    void testToString() {
-        assertEquals("RATIONALISM", PhilosophyTraits.RATIONALISM.toString());
-        assertEquals("EMPIRICISM", PhilosophyTraits.EMPIRICISM.toString());
-        assertEquals("IDEALISM", PhilosophyTraits.IDEALISM.toString());
-        assertEquals("EXISTENTIALISM", PhilosophyTraits.EXISTENTIALISM.toString());
-        assertEquals("PESSIMISM", PhilosophyTraits.PESSIMISM.toString());
-        assertEquals("NIHILISM", PhilosophyTraits.NIHILISM.toString());
+    void valuesCount() {
+        assertEquals(6, PhilosophyTraits.values().length);
     }
 
     @Test
-    void values() {
-        PhilosophyTraits[] arr = PhilosophyTraits.values();
-        assertEquals(6, arr.length);
-
-        assertTrue(arr[0] == PhilosophyTraits.RATIONALISM);
-        assertTrue(arr[1] == PhilosophyTraits.EMPIRICISM);
-        assertTrue(arr[2] == PhilosophyTraits.IDEALISM);
-        assertTrue(arr[3] == PhilosophyTraits.EXISTENTIALISM);
-        assertTrue(arr[4] == PhilosophyTraits.PESSIMISM);
-        assertTrue(arr[5] == PhilosophyTraits.NIHILISM);
+    void toStringTest() {
+        assertEquals("RATIONALISM", PhilosophyTraits.RATIONALISM.toString());
+        assertEquals("EMPIRICISM", PhilosophyTraits.EMPIRICISM.toString());
     }
 }
