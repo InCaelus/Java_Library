@@ -17,11 +17,8 @@ class PhilosophyTraitsTest {
     @Test
     void values() {
         PhilosophyTraits[] arr = PhilosophyTraits.values();
-
-        // 개수 확인
         assertEquals(6, arr.length);
 
-        // 값 포함 여부 확인
         assertTrue(arr[0] == PhilosophyTraits.RATIONALISM);
         assertTrue(arr[1] == PhilosophyTraits.EMPIRICISM);
         assertTrue(arr[2] == PhilosophyTraits.IDEALISM);
