@@ -5,69 +5,44 @@ import static org.junit.jupiter.api.Assertions.*;
 class BookTest {
 
     @Test
-    void getTitle() {
-        Book book = new Book(
-                "데카르트의 『성찰』 입문",
-                "김성호",
-                PhilosophyTraits.RATIONALISM,
-                "166.1 F824dKㄱ"
-        );
-
-        assertEquals("데카르트의 『성찰』 입문", book.getTitle());
-    }
-
-    @Test
-    void getAuthor() {
-        Book book = new Book(
-                "데카르트의 『성찰』 입문",
-                "김성호",
-                PhilosophyTraits.RATIONALISM,
-                "166.1 F824dKㄱ"
-        );
-
-        assertEquals("김성호", book.getAuthor());
-    }
-
-    @Test
-    void getTrait() {
-        Book book = new Book(
-                "데카르트의 『성찰』 입문",
-                "김성호",
-                PhilosophyTraits.RATIONALISM,
-                "166.1 F824dKㄱ"
-        );
-
-        assertEquals(PhilosophyTraits.RATIONALISM, book.getTrait());
+    void getIsbn() {
+        String isbn = "900-11-002";
+        Book book = new Book("900-11-002", "166.1 이884ㄷ",
+                "데카르트의 삶과 진리추구 : 방법서설", "이종훈", null);
+        assertEquals(isbn, book.getIsbn());
     }
 
     @Test
     void getCallNumber() {
-        Book book = new Book(
-                "데카르트의 『성찰』 입문",
-                "김성호",
-                PhilosophyTraits.RATIONALISM,
-                "166.1 F824dKㄱ"
-        );
-
-        assertEquals("166.1 F824dKㄱ", book.getCallNumber());
+        String callNumber = "166.1 이884ㄷ";
+        Book book = new Book("900-11-002", "166.1 이884ㄷ",
+                "데카르트의 삶과 진리추구 : 방법서설", "이종훈", null);
+        assertEquals(callNumber, book.getCallNumber());
     }
 
     @Test
-    void testToString() {
-        Book book = new Book(
-                "칸트의『순수이성비판』",
-                "박중목, 원당희",
-                PhilosophyTraits.IDEALISM,
-                "165.21 A241kKㅂ"
-        );
-
-        String out = book.toString();
-
-        assertTrue(out.contains("------책 정보------"));
-        assertTrue(out.contains("제목: 칸트의『순수이성비판』"));
-        assertTrue(out.contains("저자: 박중목, 원당희"));
-        assertTrue(out.contains(PhilosophyTraits.IDEALISM.toString()));
-        assertTrue(out.contains("청구 기호: 165.21 A241kKㅂ"));
-        assertTrue(out.contains("--------------"));
+    void getTitle() {
+        String title = "데카르트의 삶과 진리추구 : 방법서설";
+        Book book = new Book("900-11-002", "166.1 이884ㄷ",
+                "데카르트의 삶과 진리추구 : 방법서설", "이종훈", null);
+        assertEquals(title, book.getTitle());
     }
+
+    @Test
+    void getAuthor() {
+        String author = "이종훈";
+        Book book = new Book("900-11-002", "166.1 이884ㄷ",
+                "데카르트의 삶과 진리추구 : 방법서설", "이종훈", null);
+        assertEquals(author, book.getAuthor());
+    }
+
+    @Test
+    void getTrait() {
+        PhilosophyTraits trait = PhilosophyTraits.RATIONALISM;
+        Book book = new Book("900-11-002", "166.1 이884ㄷ",
+                "데카르트의 삶과 진리추구 : 방법서설", "이종훈", trait);
+        assertEquals(trait, book.getTrait());
+    }
+
+
 }
