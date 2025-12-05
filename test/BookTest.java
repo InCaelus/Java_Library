@@ -9,8 +9,7 @@ class BookTest {
         String isbn = "900-11-002";
         Book book = new Book("900-11-002", "166.1 이884ㄷ",
                 "데카르트의 삶과 진리추구 : 방법서설", "이종훈", null);
-        String result = book.getIsbn();
-        assertEquals(isbn, result);
+        assertEquals(isbn, book.getIsbn());
     }
 
     @Test
@@ -18,9 +17,7 @@ class BookTest {
         String callNumber = "166.1 이884ㄷ";
         Book book = new Book("900-11-002", "166.1 이884ㄷ",
                 "데카르트의 삶과 진리추구 : 방법서설", "이종훈", null);
-
-        String result = book.getCallNumber();
-        assertEquals(callNumber, result);
+        assertEquals(callNumber, book.getCallNumber());
     }
 
     @Test
@@ -28,8 +25,7 @@ class BookTest {
         String title = "데카르트의 삶과 진리추구 : 방법서설";
         Book book = new Book("900-11-002", "166.1 이884ㄷ",
                 "데카르트의 삶과 진리추구 : 방법서설", "이종훈", null);
-        String result = book.getTitle();
-        assertEquals(title, result);
+        assertEquals(title, book.getTitle());
     }
 
     @Test
@@ -37,8 +33,7 @@ class BookTest {
         String author = "이종훈";
         Book book = new Book("900-11-002", "166.1 이884ㄷ",
                 "데카르트의 삶과 진리추구 : 방법서설", "이종훈", null);
-        String result = book.getAuthor();
-        assertEquals(author, result);
+        assertEquals(author, book.getAuthor());
     }
 
     @Test
